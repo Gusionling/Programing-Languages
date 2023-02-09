@@ -1,3 +1,5 @@
+//입력을 확인하기 위한 예제 
+
 #include <stdio.h>
 
 long get_long(void)
@@ -11,7 +13,8 @@ long get_long(void)
     {
         printf("your input: ");
 
-        //정수가 아닌 것을 입력했을 때 
+        //정수가 아닌 것을 입력했을 때
+        //scanf가 제대로된 입력을 받지 못하면 입력받은 값은 버퍼에 그냥 남아있다. 
         while ((c = getchar()) != '\n')
             putchar(c); //input left in buffer
         printf(" is not an integer, Try it again\n");
